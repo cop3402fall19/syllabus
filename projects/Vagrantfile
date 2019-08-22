@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64-vagrant.box"
+  config.ssh.forward_agent = true
+  config.vm.provision "shell", path: "provision.sh", privileged: false
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "cop3402fall19"
+    vb.memory = "4096"
+    vb.cpus = "2"
+  end
+end
