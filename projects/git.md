@@ -76,7 +76,10 @@ To remove a file
     git status
     git commit test
     git status
-    git push # to sync
+
+Then push as before to sync with GitHub
+
+    git push
     
 (Only if you are working on multiple machines.)  If you need to update your local repo
 
