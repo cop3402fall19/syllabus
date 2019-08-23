@@ -68,6 +68,12 @@ Then push as before to sync with GitHub
 
     git push
     
+To remove a file
+
+    git rm test
+    git commit test
+    git push # to sync
+    
 (Only if you are working on multiple machines.)  If you need to update your local repo
 
     git pull
