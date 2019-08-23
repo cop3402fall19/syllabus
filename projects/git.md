@@ -101,6 +101,10 @@ Tag the commit
 
     git tag test_tag
     
+Check the log to see the new tag
+
+    git log
+    
 Push the tag to GitHub
 
     git push --tags
