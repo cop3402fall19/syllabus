@@ -71,7 +71,9 @@ Then push as before to sync with GitHub
 To remove a file
 
     git rm test
+    git status
     git commit test
+    git status
     git push # to sync
     
 (Only if you are working on multiple machines.)  If you need to update your local repo
