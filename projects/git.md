@@ -1,10 +1,18 @@
 # Git Basics
 
+## Setting up GitHub Clasrooms
+
+First complete HW 1 in Webcourses to setup your GitHub classroom's repositories.
+
 ## Setting Up the Repositories
 
 First clone the syllabus
 
     git clone git@github.com:cop3402fall19/syllabus.git
+    
+If you do not have your ssh key setup, you can also clone via https and provide your GitHub username and password
+
+    git clone https://github.com/cop3402fall19/syllabus.git
 
 Change directory to the project directory
 
@@ -12,7 +20,7 @@ Change directory to the project directory
     
 Then clone your project repo (_you must first setup GitHub Classrooms by completing homework 1_)
 
-    git clone git@github.com:cop3402fall19/project-USERID.git
+    git clone https://github.com/cop3402fall19/project-USERID.git  # or use git@github.com:cop3402fall19/project-USERID.git
 
 Change directory to your project directory
 
@@ -27,6 +35,10 @@ Make some changes to a file
 Check the status of the repository.  You should see that `README.md` has changed
 
     git status
+    
+Use the following to see the changes
+
+    git diff
     
 Commit the changes to the file
 
@@ -46,6 +58,15 @@ Check the status of the repository again.
 
     git status
     
+To add a new file do
+
+    echo "my new file" > test
+    git add test
+    git commit test
+    
+Then push as before to sync with GitHub
+
+    git push
     
 (Only if you are working on multiple machines.)  If you need to update your local repo
 
