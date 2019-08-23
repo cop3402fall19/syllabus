@@ -1,3 +1,3 @@
-sudo apt-get update
+yes | sudo apt-get update
 
-sudo apt-get install clang llvm git make
+yes | sudo apt-get install clang llvm git make
