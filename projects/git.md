@@ -36,7 +36,7 @@ Check the status of the repository.  You should see that `README.md` has changed
 
     git status
     
-Use the following to see the changes
+Use the following to see the changes (`q` to quit)
 
     git diff
     
@@ -101,7 +101,7 @@ Tag the commit
 
     git tag test_tag
     
-Check the log to see the new tag
+Check the log to see the new tag (`q` to quit)
 
     git log
     
