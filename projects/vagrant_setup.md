@@ -8,7 +8,11 @@ You will also need Virtual Box, which is the virtual machine software: <https://
 
 ### Creating the Virtual Machine
 
-Be sure that you are in the directory that contains the courses `Vagrantfile` (it is the same directory as this guide).
+Be sure that you are in the directory that contains the courses `Vagrantfile` (it is the same directory as this guide, `syllabus/projects`).
+
+    cd syllabus/projects # if you are not here already
+
+Creat the virtual machine
 
     vagrant up
     
