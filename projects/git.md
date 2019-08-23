@@ -61,7 +61,9 @@ Check the status of the repository again.
 To add a new file do
 
     echo "my new file" > test
+    git status
     git add test
+    git status
     git commit test
     
 Then push as before to sync with GitHub
