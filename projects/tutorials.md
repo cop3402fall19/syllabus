@@ -1,4 +1,4 @@
-- Linux command-line
+- Linux command-line:
   - <https://ryanstutorials.net/linuxtutorial/commandline.php>
   - <http://www.linuxcommand.org/lc3_learning_the_shell.php>
   - <http://overthewire.org/wargames/>
