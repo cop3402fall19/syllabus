@@ -32,6 +32,8 @@ You are now using the virtual machine.  It is a Linux-based operating system.  F
 
 Once in the virtual machine, you can clone your git project's repository.  The directory containing the `Vagrantfile` is mapped to `/vagrant` so that you can access the compiler test files.  The virtual machine only provides a command-line interface, so you can clone your repository in `/vagrant/ in order to edit your project on your host machine.  Then compiler and run it in the virtual machine.
 
+    cd /vagrant/
+
 ### More Commands
 
 If at some point `provision.sh` is updated by the instructor, re-provision with
