@@ -95,7 +95,7 @@ Check for any pending changes first
     
 Commit any pending changes
 
-    git commit ...
+    git commit file1 file2 etc
     
 Tag the commit
 
