@@ -99,7 +99,7 @@ Commit any pending changes
     
 Tag the commit
 
-    git tag proj0
+    git tag test_tag
     
 Push the tag to GitHub
 
