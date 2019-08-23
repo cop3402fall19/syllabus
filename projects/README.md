@@ -24,7 +24,7 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 
 - [Project 4 -- The Function Abstraction](project4.md)
 
-- [(Bonus) Project 5 -- Arrays](project5.md)
+- [(Bonus) Project 5 -- Arrays](project5bonus.md)
 
 ## Important documents
 
