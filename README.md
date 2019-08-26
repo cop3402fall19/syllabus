@@ -92,7 +92,7 @@ _**The final deadline for all late project submissions is Thursday 12/05 7:30PM*
   - Students may resubmit up to late deadline for regrading (minus late penalties).
 
   - Late policy: up to two weeks late, 1pt off.  2pt off any time
-    after.  Absolute deadline for late projects is 7pm day of final
+    after.  Absolute deadline for late projects is 7:30pm day of final
     (12/05).
       
 - 20% Homework, 25 short homeworks, lowest 5 are dropped, 1pt each.
