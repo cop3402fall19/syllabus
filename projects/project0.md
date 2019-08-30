@@ -26,15 +26,12 @@ Skills needed:
       = PRINT expression SEMI
 
     expression
-      = integer PLUS integer
-      | integer MINUS integer
-      | integer TIMES integer
-      | integer DIVIDE integer
-      | integer MOD integer
-      | integer
-
-    integer
-      = DIGIT DIGIT*
+      = NUMBER PLUS NUMBER
+      | NUMBER MINUS NUMBER
+      | NUMBER TIMES NUMBER
+      | NUMBER DIVIDE NUMBER
+      | NUMBER MOD NUMBER
+      | NUMBER
 
 This grammar means program will only look something like the following:
 

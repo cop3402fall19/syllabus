@@ -23,15 +23,12 @@ Skills need:
       = PRINT expression SEMI
 
     expression
-      = expression PLUS integer
-      | expression MINUS integer
-      | expression TIMES integer
-      | expression DIVIDE integer
+      = expression PLUS NUMBER
+      | expression MINUS NUMBER
+      | expression TIMES NUMBER
+      | expression DIVIDE NUMBER
       | LPAREN expression RPAREN
-      | integer
-
-    integer
-      = DIGIT DIGIT*
+      | NUMBER
 
 ### What Has Changed?
 

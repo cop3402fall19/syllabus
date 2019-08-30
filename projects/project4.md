@@ -20,14 +20,14 @@ Skills needed:
       = declaration* function* statement*
 
     function
-      = INT identifier LPAREN identifier (COMMA identifier)* RPAREN LCURLY declaration* statement* RCURLY
+      = INT IDENTIFIER LPAREN ( IDENTIFIER (COMMA IDENTIFIER)* )? RPAREN LCURLY declaration* statement* RCURLY
 
     declaration
-      = INT identifier SEMI
+      = INT IDENTIFIER SEMI
 
     statement
       = PRINT expression SEMI
-      | identifier ASSIGN expression SEMI
+      | IDENTIFIER ASSIGN expression SEMI
       | IF LPAREN expression RPAREN statement
       | IF LPAREN expression RPAREN statement ELSE statement
       | WHILE LPAREN expression RPAREN statement
@@ -35,24 +35,19 @@ Skills needed:
       | RETURN expression SEMI
 
     expression
-      = expression PLUS integer
-      | expression MINUS integer
-      | expression TIMES integer
-      | expression DIVIDE integer
-      | expression EQUALS integer
-      | expression AND integer
-      | expression OR integer
+      = expression PLUS NUMBER
+      | expression MINUS NUMBER
+      | expression TIMES NUMBER
+      | expression DIVIDE NUMBER
+      | expression EQUALS NUMBER
+      | expression AND NUMBER
+      | expression OR NUMBER
       | NOT expression
       | LPAREN expression RPAREN
-      | integer
-      | identifier
-      | identifier LPAREN [ expression (COMMA expression)* ] RPAREN
+      | NUMBER
+      | IDENTIFIER
+      | IDENTIFIER LPAREN ( expression (COMMA expression)* )? RPAREN
 
-    integer
-      = DIGIT DIGIT*
-
-    identifier
-      = LETTER LETTER*
 
 ### What Has Changed?
 

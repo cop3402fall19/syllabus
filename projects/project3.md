@@ -18,34 +18,29 @@ Skills needed:
       = declaration* statement*
 
     declaration
-      = INT identifier SEMI
+      = INT IDENTIFIER SEMI
 
     statement
       = PRINT expression SEMI
-      | identifier ASSIGN expression SEMI
+      | IDENTIFIER ASSIGN expression SEMI
       | IF LPAREN expression RPAREN statement
       | IF LPAREN expression RPAREN statement ELSE statement
       | WHILE LPAREN expression RPAREN statement
       | LCURLY statement* RCURLY
 
     expression
-      = expression PLUS integer
-      | expression MINUS integer
-      | expression TIMES integer
-      | expression DIVIDE integer
-      | expression EQUALS integer
-      | expression AND integer
-      | expression OR integer
+      = expression PLUS INTEGER
+      | expression MINUS INTEGER
+      | expression TIMES INTEGER
+      | expression DIVIDE INTEGER
+      | expression EQUALS INTEGER
+      | expression AND INTEGER
+      | expression OR INTEGER
       | NOT expression
       | LPAREN expression RPAREN
-      | integer
-      | identifier
+      | INTEGER
+      | IDENTIFIER
 
-    integer
-      = DIGIT DIGIT*
-
-    identifier
-      = LETTER LETTER*
 
 ### What Has Changed?
 

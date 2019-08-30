@@ -18,27 +18,20 @@ Skills needed:
       = declaration* statement*
 
     declaration
-      = INT identifier SEMI
+      = INT IDENTIFIER SEMI
 
     statement
       = PRINT expression SEMI
-      | identifier ASSIGN expression SEMI
+      | IDENTIFIER ASSIGN expression SEMI
 
     expression
-      = expression PLUS integer
-      | expression MINUS integer
-      | expression TIMES integer
-      | expression DIVIDE integer
+      = expression PLUS NUMBER
+      | expression MINUS NUMBER
+      | expression TIMES NUMBER
+      | expression DIVIDE NUMBER
       | LPAREN expression RPAREN
-      | integer
-      | identifier
-
-    integer
-      = DIGIT DIGIT*
-
-    identifier
-      = LETTER LETTER*
-
+      | NUMBER
+      | IDENTIFIER
 
 ### What Has Changed?
 
