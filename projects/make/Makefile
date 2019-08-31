@@ -2,7 +2,8 @@ SRC = $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o)
 PROG = simplec
 
-.PHONY = all
+.PHONY: all clean
+
 all: $(PROG)
 
 $(PROG): $(OBJ)

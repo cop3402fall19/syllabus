@@ -56,7 +56,7 @@ In order to translate the print statements, use the following templates:
 - `call void @print_integer(i32 2)` for some constant integer, in this case `2`.
 - `call void @print_integer(i32 %named_identifier)` for some identifier, in this case `%named_identifier`
 
-There are only five arithmetic operations you need to support, `add nsw`, `sub nsw`, `mul nsw`, `sdiv`, and `srem`.  For example
+There are only five arithmetic operations you need to support, `add nsw`, `sub nsw`, `mul nsw`, `sdiv`, and `srem`.  (Technically `srem` is remainder, not modulo).  For example
 
     print 2 + 3
     print 2 - 3
