@@ -32,4 +32,5 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 - [git tutorial](git.md)
 - [test cases](tests/)
 - [LLVM IR template](template.ll)
+- [Makefile](make/Makefile)
 - [external tutorials](tutorials.md) on git, bash, etc.
