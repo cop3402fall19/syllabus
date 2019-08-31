@@ -1,1 +1,1 @@
-This directory contains slides and lecture notes.
+This directory contains lecture notes.
