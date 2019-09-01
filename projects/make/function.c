@@ -1,6 +1,6 @@
 #include "function.h"
 #include <stdio.h>
 
-int f() {
+void f() {
   printf("f() in function.c\n");
 }
