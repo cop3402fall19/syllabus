@@ -7,10 +7,10 @@ PROG = simplec
 all: $(PROG)
 
 $(PROG): $(OBJ)
-	gcc -o $@ $^
+	$(CC) -o $@ $^
 
 %.o: %.c
-	gcc -c $<
+	$(CC) -c $<
 
 clean:
 	rm -rf $(PROG) $(OBJ)
