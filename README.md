@@ -43,20 +43,20 @@ _All dates in year of semester, times in UCF's time zone._
 | Date     | Tuesday Lecture                                                                  | Date   | Thursday Lecture                                                           |
 |----------|----------------------------------------------------------------------------------|--------|----------------------------------------------------------------------------|
 | 08/27    | Course overview, using git                                                       | 08/29  | (no lecture, game)                                                         |
-| 09/03    | OS overview, dev tools, running LLVM                                             | 09/05  | Compiler overview and basic LLVM IR                                     |
-| 09/10    | Lexing, ascii                                                                    | 09/12  | Automata theory, regular expressions                                       |
-| 09/17    | Regular expressions to NFAs to DFAs                                              | 09/19  | Formal grammars and parsing, (**proj0 due**)                               |
-| 09/24    | Predictive parsing with recursive descent                                        | 09/26  | Arithmetic expressions in assembly                                         |
-| 10/01    | Recursion                                                                        | 10/03  | LR parsing                                                                 |
-| 10/08    | Variable constructs (**proj1 due**)                                              | 10/10  | Symbol tables and type checking                                            |
-| 10/15    | Memory management on the stack                                                   | 10/17  | Review                                                                     |
-| 10/22    | Structured programming and control-flow                                          | 10/24  | Implementing control-flow in LLVM IR (**proj2 due**)                      |
-| 10/29    | Implementing control-flow constructs                                             | 10/31  | The function abstraction, stack frames                                     |
-| 11/05    | Function constructs, symbol tables and type-checking revisited                   | 11/07  | Functions in LLVM IR, Intel ABI                                           |
-| 11/12    | Optimization (**proj3 due**)                                                     | 11/14  | Control-flow and data-flow analysis                                        |
+| 09/03    | (cancelled, storm)                                                               | 09/05  | (cancelled, storm) Online: OS overview, dev tools, running LLVM            |
+| 09/10    | Compiler overview and basic LLVM IR                                              | 09/12  | Lexing,                                                                    |
+| 09/17    | Automata theory, regular expressions                                             | 09/19  | Regular expressions to NFAs to DFAs                                        |
+| 09/24    | Formal grammars and parsing (**proj0 due**)                                      | 09/26  | Predictive parsing with recursive descent                                  |
+| 10/01    | Arithmetic expressions in assembly                                               | 10/03  | Recursion                                                                  |
+| 10/08    | LR parsing                                                                       | 10/10  | Variable constructs (**proj1 due**)                                        |
+| 10/15    | Symbol tables and type checking                                                  | 10/17  | Memory management on the stack                                             |
+| 10/22    | Structured programming and control-flow                                          | 10/24  | Implementing control-flow in LLVM IR                                       |
+| 10/29    | Implementing control-flow constructs (**proj2 due**)                             | 10/31  | The function abstraction, stack frames                                     |
+| 11/05    | Function constructs, symbol tables and type-checking revisited                   | 11/07  | Functions in LLVM IR, Intel ABI                                            |
+| 11/12    | Optimization                                                                     | 11/14  | Control-flow and data-flow analysis (**proj3 due**)                        |
 | 11/19    | Software security                                                                | 11/21  | Program analysis                                                           |
-| 11/26    | Review                                                                           | 11/28  | (no lecture, thanksgiving) (**proj4 due**)                                 |
-| 12/03    | Review                                                                           | 12/05  | Final exam period 7:30pm-9:50pm (end at 9pm) (**late project deadline**)   |
+| 11/26    | Review                                                                           | 11/28  | (no lecture, thanksgiving)                                                 |
+| 12/03    | Review (**proj4 due**)                                                           | 12/05  | Final exam period 7:30pm-9:50pm (end at 9pm) (**late project deadline**)   |
 
 <!-- _All readings are chapters and sections (inclusive) from the Dragon book (Compilers: Principles, Techniques, & Tools, Second Edition)_ -->
 
@@ -66,11 +66,11 @@ All homework is due _**one week after assignment, i.e., 7:30pm Tuesday or Thursd
 
 All projects are due _**7:30pm Tuesday or Thursday before class**_.  There are about 2.5 weeks between project due dates.
 
-- Project 0 Thursday 09/19 7:30PM
-- Project 1 Tuesday 10/08 7:30PM
-- Project 2 Thursday 10/24 7:30PM
-- Project 3 Tuesday 11/12 7:30PM
-- Project 4 Thursday 11/28 7:30PM
+- Project 0 Thursday ~~09/19~~ 09/24 7:30PM
+- Project 1 Tuesday ~~10/08~~ 10/10 7:30PM
+- Project 2 Thursday ~~10/24~~ 10/29 7:30PM
+- Project 3 Tuesday ~~11/12~~ 11/14 7:30PM
+- Project 4 Thursday ~~11/28~~ 12/03 7:30PM
 
 _**The final deadline for all late project submissions is Thursday 12/05 7:30PM**_, one week after the project 4 deadline and before the final exam.
 
