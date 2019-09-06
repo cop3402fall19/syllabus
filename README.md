@@ -44,7 +44,7 @@ _All dates in year of semester, times in UCF's time zone._
 |----------|----------------------------------------------------------------------------------|--------|----------------------------------------------------------------------------|
 | 08/27    | Course overview, using git                                                       | 08/29  | (no lecture, game)                                                         |
 | 09/03    | (cancelled, storm)                                                               | 09/05  | (cancelled, storm) Online: OS overview, dev tools, running LLVM            |
-| 09/10    | Compiler overview and basic LLVM IR                                              | 09/12  | Lexing,                                                                    |
+| 09/10    | Compiler overview and basic LLVM IR                                              | 09/12  | Lexing, ascii                                                              |
 | 09/17    | Automata theory, regular expressions                                             | 09/19  | Regular expressions to NFAs to DFAs                                        |
 | 09/24    | Formal grammars and parsing (**proj0 due**)                                      | 09/26  | Predictive parsing with recursive descent                                  |
 | 10/01    | Arithmetic expressions in assembly                                               | 10/03  | Recursion                                                                  |
