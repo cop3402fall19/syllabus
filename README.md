@@ -72,7 +72,7 @@ All projects are due _**7:30pm Tuesday or Thursday before class**_.  There are a
 - Project 3 Tuesday ~~11/12~~ 11/14 7:30PM
 - Project 4 Thursday ~~11/28~~ 12/03 7:30PM
 
-_**The final deadline for all late project submissions is Thursday 12/05 7:30PM**_, one week after the project 4 deadline and before the final exam.
+_**The final deadline for all late project submissions is Thursday 12/05 7:30PM**_ before the final exam.
 
 ## Grading
 
