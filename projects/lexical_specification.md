@@ -78,6 +78,4 @@ Integers and identifiers are the only two tokens that
 
 ### Whitespace
 
-All whitespace (spaces, newlines, tabs, etc) should be ignored.  All
-other nonprintable characters are a lexer errors, except for
-end-of-file.
+Whitespace (spaces, newlines, tabs, etc) can appear between any tokens and should be ignored.  This means that a newline can appear between any tokens, and not necessarily at the end of a statement.  All other nonprintable characters are a lexer errors.
