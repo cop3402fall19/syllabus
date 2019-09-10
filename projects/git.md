@@ -16,7 +16,17 @@ If you do not have your ssh key setup, you can also clone via https and provide 
 
 Change directory to the project directory
 
-    cd syllabus/project
+    cd syllabus/projects
+    
+Then from this directory enter the virtual machine
+
+    vagrant ssh
+    
+Once in the VM, run
+
+    cd /vagrant
+    
+to access the projects folder.
     
 Then clone your project repo (_you must first setup GitHub Classrooms by completing homework 1_)
 
