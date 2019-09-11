@@ -4,17 +4,22 @@
 
 First complete HW 1 in Webcourses to setup your GitHub classroom's repositories.
 
-## Setting Up the Repositories
+## Getting the Syllabus
 
-First clone the syllabus
+Do one of the following:
 
-    git clone git@github.com:cop3402fall19/syllabus.git
+1. Clone the syllabus (this will not be possible if your host machine does not have git)
+
+        git clone https://github.com/cop3402fall19/syllabus.git
+
+2. Download the syllabus zipfile from GitHub and unzip it
+
+        https://github.com/cop3402fall19/syllabus/archive/master.zip
+
     
-If you do not have your ssh key setup, you can also clone via https and provide your GitHub username and password
+## Setting Up Your Repository
 
-    git clone https://github.com/cop3402fall19/syllabus.git
-
-Change directory to the project directory
+Change directory to the projects directory wherever you downloaded the syllabus.
 
     cd syllabus/projects
     
@@ -27,6 +32,8 @@ Once in the VM, run
     cd /vagrant
     
 to access the projects folder.
+
+(Note that if you are not using vagrant, you do not need to clone your repository in the projects directory.)
     
 Then clone your project repo (_you must first setup GitHub Classrooms by completing homework 1_)
 
@@ -35,6 +42,21 @@ Then clone your project repo (_you must first setup GitHub Classrooms by complet
 Change directory to your project directory
 
     cd project-USERID
+
+## `git config`
+
+Setup your name and email (use the email associated with your GitHub account).
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    
+Set your editor for commit messages
+
+    git config --global core.editor "nano"
+
+For vagrant users, `nano` should already be installed.  Confirm this is the case for your installation by typing `nano`.  `ctrl-x` will escape.  If `nano` is not found, run the following to install it.
+
+    sudo apt-get install nano
 
 ## Basic `git` Commands
 
@@ -54,7 +76,7 @@ Commit the changes to the file
 
     git commit README.md
 
-Add a message describe the change to the editor that appears.  Save and exit the editor.
+Add a message describe the change to the editor that appears.  Save and exit the editor.  For the `nano` editor, exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit "<enter>" to confirm the file name.
 
 Check the status of the repository.  You should see that there are no local changes, but you are out of sync with the remote repo
 
