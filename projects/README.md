@@ -10,6 +10,8 @@ __Running the output of your compiler__.  One challenge to compiler development 
 
 __Submitting your project__. The project should be submitted via [git](git.md) to your GitHub classroom's repository with `git tag`.  See the first homework in webcourses for setting up GitHub Classroom.  Read this [git tutorial](git.md) to see how to use git.  These are the tags for each project: `proj0`, `proj1`, `proj2`, `proj3`, `proj4`, `proj5`.
 
+![toolchain](https://raw.githubusercontent.com/cop3402fall19/syllabus/master/projects/toolchain.png)
+
 ## Project Descriptions
 
 The [grammar overview](grammar_overview.md) and [lexical specification](lexical_specification.md) provide an overview of the language specification used in each project.
