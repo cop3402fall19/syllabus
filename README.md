@@ -40,20 +40,22 @@ _All dates in year of semester, times in UCF's time zone._
 
 ### Lecture Schedule
 
+_DB_ stands for the "Dragon Book", i.e., the recommended textbook for this course.
+
 | Date     | Tuesday Lecture                                                                  | Date   | Thursday Lecture                                                           |
 |----------|----------------------------------------------------------------------------------|--------|----------------------------------------------------------------------------|
 | 08/27    | Course overview, using git                                                       | 08/29  | (no lecture, game)                                                         |
 | 09/03    | (cancelled, storm)                                                               | 09/05  | (cancelled, storm) Online: OS overview, dev tools, running LLVM            |
-| 09/10    | Compiler overview and basic LLVM IR                                              | 09/12  | Lexing, ascii                                                              |
-| 09/17    | Automata theory, regular expressions                                             | 09/19  | Regular expressions to NFAs to DFAs                                        |
-| 09/24    | Formal grammars and parsing (**proj0 due**)                                      | 09/26  | Predictive parsing with recursive descent                                  |
-| 10/01    | Arithmetic expressions in assembly                                               | 10/03  | Recursion                                                                  |
-| 10/08    | LR parsing                                                                       | 10/10  | Variable constructs (**proj1 due**)                                        |
-| 10/15    | Symbol tables and type checking                                                  | 10/17  | Memory management on the stack                                             |
-| 10/22    | Structured programming and control-flow                                          | 10/24  | Implementing control-flow in LLVM IR                                       |
+| 09/10    | Compiler overview and basic LLVM IR, _DB chapter 2_                                              | 09/12  | Lexing, ascii, _DB 3.1--3.3_                                                             |
+| 09/17    | Automata theory, regular expressions, _DB 3.4--3.6_                                             | 09/19  | Regular expressions to NFAs to DFAs, _DB 3.7_                                        |
+| 09/24    | Formal grammars and parsing (**proj0 due**) _DB 4.1--4.3_                                      | 09/26  | Predictive parsing with recursive descent _DB 4.4_                                  |
+| 10/01    | Arithmetic expressions in assembly, _DB 6.4_                                               | 10/03  | Recursion                                                                  |
+| 10/08    | LR parsing _DB 4.5-4.6_                                                                       | 10/10  | Variable constructs (**proj1 due**) _DB 6.3_                                          |
+| 10/15    | Symbol tables and type checking _DB 6.5_                                                 | 10/17  | Memory management on the stack _DB 7.1-7.2_                                            |
+| 10/22    | Structured programming and control-flow                                        | 10/24  | Implementing control-flow in LLVM IR _DB 6.6_                                      |
 | 10/29    | Implementing control-flow constructs (**proj2 due**)                             | 10/31  | The function abstraction, stack frames                                     |
 | 11/05    | Function constructs, symbol tables and type-checking revisited                   | 11/07  | Functions in LLVM IR, Intel ABI                                            |
-| 11/12    | Optimization                                                                     | 11/14  | Control-flow and data-flow analysis (**proj3 due**)                        |
+| 11/12    | Optimization _DB 8.1_                                                                     | 11/14  | Control-flow and data-flow analysis (**proj3 due**) _DB 8.4, 9.1-9.4_                        |
 | 11/19    | Software security                                                                | 11/21  | Program analysis                                                           |
 | 11/26    | Review                                                                           | 11/28  | (no lecture, thanksgiving)                                                 |
 | 12/03    | Review (**proj4 due**)                                                           | 12/05  | Final exam period 7:30pm-9:50pm (end at 9pm) (**late project deadline**)   |
