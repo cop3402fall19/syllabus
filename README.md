@@ -46,7 +46,7 @@ _DB_ stands for the "Dragon Book", i.e., the recommended textbook for this cours
 |----------|----------------------------------------------------------------------------------|--------|----------------------------------------------------------------------------|
 | 08/27    | Course overview, using git                                                       | 08/29  | (no lecture, game)                                                         |
 | 09/03    | (cancelled, storm)                                                               | 09/05  | (cancelled, storm) Online: OS overview, dev tools, running LLVM            |
-| 09/10    | Compiler overview and basic LLVM IR, _DB chapter 2_                                              | 09/12  | Lexing, ascii, _DB 3.1--3.3_                                                             |
+| 09/10    | Compiler overview and basic LLVM IR, _DB chapters 1 and 2_                                              | 09/12  | Lexing, ascii, _DB 3.1--3.3_                                                             |
 | 09/17    | Automata theory, regular expressions, _DB 3.4--3.6_                                             | 09/19  | Regular expressions to NFAs to DFAs, _DB 3.7_                                        |
 | 09/24    | Formal grammars and parsing (**proj0 due**) _DB 4.1--4.3_                                      | 09/26  | Predictive parsing with recursive descent _DB 4.4_                                  |
 | 10/01    | Arithmetic expressions in assembly, _DB 6.4_                                               | 10/03  | Recursion                                                                  |
