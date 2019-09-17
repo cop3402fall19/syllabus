@@ -79,3 +79,7 @@ Integers and identifiers are the only two tokens that
 ### Whitespace
 
 Whitespace (spaces, newlines, tabs, etc) can appear between any tokens and should be ignored.  This means that a newline can appear between any tokens, and not necessarily at the end of a statement.  All other nonprintable characters are a lexer errors.
+
+### Lexeme size
+
+All lexemes are ASCII.  The maximum lexeme size is 4095 characters.
