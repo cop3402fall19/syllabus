@@ -12,7 +12,7 @@ where
 
 - your compiler is called `simplec`, 
 - it takes a single argument, which is the name of a SimpleC source file, and
-- it emits the resulting LLVM IR to standard out, e.g., with `printf`.  (Note that `> program.ll` means the output of the compiler is written to the file `program.ll`).
+- it emits the resulting LLVM IR to standard out, e.g., with `printf`.  (Note that `> program.ll` means the output gets redirected and written to the file `program.ll`, instead of your terminal window).
 
 Since grading is automated, any projects that do not follow these standards for building and running may not get credit.
 
