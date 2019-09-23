@@ -27,6 +27,7 @@ Skills need:
       | expression MINUS NUMBER
       | expression TIMES NUMBER
       | expression DIVIDE NUMBER
+      | expression MOD NUMBER
       | LPAREN expression RPAREN
       | NUMBER
 

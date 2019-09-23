@@ -33,6 +33,7 @@ Skills needed:
       | expression MINUS INTEGER
       | expression TIMES INTEGER
       | expression DIVIDE INTEGER
+      | expression MOD NUMBER
       | expression EQUALS INTEGER
       | expression AND INTEGER
       | expression OR INTEGER

@@ -40,6 +40,7 @@ Skills needed:
       | expression TIMES NUMBER
       | expression DIVIDE NUMBER
       | expression EQUALS NUMBER
+      | expression MOD NUMBER
       | expression AND NUMBER
       | expression OR NUMBER
       | NOT expression
