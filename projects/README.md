@@ -16,7 +16,7 @@ where
 
 Since grading is automated, any projects that do not follow these standards for building and running may not get credit.
 
-__Use clang version 6__.  To standardize the development and grading environment, we provide a Vagrant virtual machine configuration.  The included `Vagrantfile` defines a virtual machine containing the necessary libraries needed to develop your compiler.  Follow the [vagrant setup](vagrant_setup.md) directions to install Vagrant and Virtual Box.   Your project will be graded using this environment.  The virtual machine is an 64-bit x86 machine running Ubuntu 18 with LLVM v6, so those running a similar setup may not need the virtual machine, e.g., those already running Linux on bare metal or Windows Subsystem for Linux.  Please verify before submitting your project.
+__Use clang version 6__.  To standardize the development and grading environment, we provide a Vagrant virtual machine configuration.  The included `Vagrantfile` defines a virtual machine containing the necessary libraries needed to develop your compiler.  Follow the [vagrant setup](vagrant_setup.md) directions to install Vagrant and Virtual Box.   Your project will be graded using this environment.  The virtual machine is an 64-bit x86 machine running Ubuntu 18 with LLVM v6, so those running a similar setup may not need the virtual machine, e.g., those already running Linux on bare metal or Windows Subsystem for Linux.  If not using vagrant, look at the <provision.sh> script for the packages to install.  Please verify your project works with clang v6 before submitting your project.
 
 ## Running the output of your compiler
 
