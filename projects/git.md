@@ -52,8 +52,7 @@ Setup your name and email (use the email associated with your GitHub account).
     
 Set your editor for commit messages
 
-    git config --global core.editor "
-    "
+    git config --global core.editor "nano"
 
 For vagrant users, `nano` should already be installed.  Confirm this is the case for your installation by typing `nano`.  `ctrl-x` will escape.  If `nano` is not found, run the following to install it.
 
