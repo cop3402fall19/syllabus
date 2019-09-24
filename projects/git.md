@@ -52,7 +52,8 @@ Setup your name and email (use the email associated with your GitHub account).
     
 Set your editor for commit messages
 
-    git config --global core.editor "nano"
+    git config --global core.editor "
+    "
 
 For vagrant users, `nano` should already be installed.  Confirm this is the case for your installation by typing `nano`.  `ctrl-x` will escape.  If `nano` is not found, run the following to install it.
 
@@ -76,7 +77,7 @@ Commit the changes to the file
 
     git commit README.md
 
-Add a message describe the change to the editor that appears.  Save and exit the editor.  For the `nano` editor, exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit "<enter>" to confirm the file name.
+Add a message describe the change to the editor that appears.  Save and exit the editor.  For the `nano` editor, exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit `<enter>` to confirm the file name.
 
 Check the status of the repository.  You should see that there are no local changes, but you are out of sync with the remote repo
 
