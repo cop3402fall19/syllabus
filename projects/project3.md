@@ -30,14 +30,14 @@ Skills needed:
       | LCURLY statement* RCURLY
 
     expression
-      = expression PLUS INTEGER
-      | expression MINUS INTEGER
-      | expression TIMES INTEGER
-      | expression DIVIDE INTEGER
-      | expression MOD NUMBER
-      | expression EQUALS INTEGER
-      | expression AND INTEGER
-      | expression OR INTEGER
+       = expression PLUS expression
+      | expression MINUS expression
+      | expression TIMES expression
+      | expression DIVIDE expression
+      | expression MOD expression
+      | expression EQUALS expression
+      | expression AND expression
+      | expression OR expression
       | NOT expression
       | LPAREN expression RPAREN
       | INTEGER
