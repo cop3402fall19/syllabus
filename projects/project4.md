@@ -35,14 +35,14 @@ Skills needed:
       | RETURN expression SEMI
 
     expression
-      = expression PLUS NUMBER
-      | expression MINUS NUMBER
-      | expression TIMES NUMBER
-      | expression DIVIDE NUMBER
-      | expression EQUALS NUMBER
-      | expression MOD NUMBER
-      | expression AND NUMBER
-      | expression OR NUMBER
+      = expression PLUS expression
+      | expression MINUS expression
+      | expression TIMES expression
+      | expression DIVIDE expression
+      | expression MOD expression
+      | expression EQUALS expression
+      | expression AND expression
+      | expression OR expression
       | NOT expression
       | LPAREN expression RPAREN
       | NUMBER
