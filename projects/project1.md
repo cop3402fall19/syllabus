@@ -23,11 +23,11 @@ Skills need:
       = PRINT expression SEMI
 
     expression
-      = expression PLUS NUMBER
-      | expression MINUS NUMBER
-      | expression TIMES NUMBER
-      | expression DIVIDE NUMBER
-      | expression MOD NUMBER
+      = expression PLUS expression
+      | expression MINUS expression
+      | expression TIMES expression
+      | expression DIVIDE expression
+      | expression MOD expression
       | LPAREN expression RPAREN
       | NUMBER
 
