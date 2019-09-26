@@ -33,7 +33,7 @@ Skills need:
 
 ### What Has Changed?
 
-- The expression now allows another expression to be the left operand
+- The expression now allows nested expressions to be the operands.
 
 ### Notes on Semantics
 
