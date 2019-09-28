@@ -71,7 +71,7 @@ First open a shell session.  For native installations of Ubuntu, navigate to the
 
 Go to your home directory.  Running `cd`, i.e., "change directory", goes to your home directory by default.
 
-   cd
+    cd
 
 Clone your GitHub classrooms repository, where USERID is your GitHub user ID.  You will need to type your GitHub user name and password.
 
@@ -91,9 +91,9 @@ You should also clone the course syllabus, which will have the project's test ca
 
 At this point, you should have (at least) two directories under your home directory
 
-   /home/USER/
-       |- project-USERID
-       |- syllabus
+    /home/USER/
+        |- project-USERID
+        |- syllabus
 
 You can view these with `ls`, where `~/` is special syntax for referring to your home directory.
 
