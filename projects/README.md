@@ -40,7 +40,7 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 
 - [(Bonus) Project 5 -- Arrays](project5bonus.md)
 
-## Setup Guide
+## Guide to the Command Line
 
 
 This guide is for those using Ubuntu 18.04.  If you do not this installed, you can use a virtual machine in Linux or MacOS (use VirtualBox and download an Ubuntu 18 virtual machine or use the provided <Vagrantfile> with vagrant), or Windows Subsystem for Linux for Windows (download Ubuntu 18 from the app store).
