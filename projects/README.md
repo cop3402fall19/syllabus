@@ -76,7 +76,7 @@ Go to your home directory.  Running `cd`, i.e., "change directory", goes to your
 
 Clone your GitHub classrooms repository, where USERID is your GitHub user ID.  You will need to type your GitHub user name and password.
 
-      git clone https://github.com/cop3402fall19/project-USERID.git
+    git clone https://github.com/cop3402fall19/project-USERID.git
 
 If this step does not work, check the error message for a reason.  If yo have not completed Homework 1 yet, then your repository will not yet exist.  Complete Homework 1 first.
 
@@ -86,7 +86,7 @@ If you get an authentication error, double-check your user name and password, as
 
 You should also clone the course syllabus, which will have the project's test cases.
 
-      git clone https://github.com/cop3402fall19/syllabus.git
+    git clone https://github.com/cop3402fall19/syllabus.git
 
 ### File system structure
 
@@ -106,13 +106,13 @@ Your project needs a Makefile for automatic grading.  This will allow your softw
 
 Copy the provided Makefile into your source code repository.
 
-     cd ~/project-USERID
-     cp ~/syllabus/projects/make/Makefile ./
+    cd ~/project-USERID
+    cp ~/syllabus/projects/make/Makefile ./
 
 Commit the Makefile to your repository.  A commit saves changes to the source repository in a log.
 
-       git add Makefile
-       git commit Makefile
+    git add Makefile
+    git commit Makefile
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
@@ -120,12 +120,12 @@ Commit the Makefile to your repository.  A commit saves changes to the source re
 
 Create your C source code
 
-       touch simplec.c
+    touch simplec.c
 
 Then add it to the repository
 
-     git add simplec.c
-     git commit
+    git add simplec.c
+    git commit
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
@@ -133,13 +133,13 @@ Then add it to the repository
 
 At this point, all changes have been logged only to your local repository and will not be visible on GitHub.  You can view the status of your repository like this:
 
-   git status
+    git status
 
 At the top, it will tell you that your local version is ahead of the remote repository call "origin".
 
 Synced the local copy of the repository with the remote GitHub repository.
 
-       git push
+    git push
 
 Type your GitHub user name and password to complete the push.
 
@@ -147,13 +147,13 @@ Type your GitHub user name and password to complete the push.
 
 As you program, periodically commit these changes to your local repository and sync them to GitHub.  Ideally, commits record a log of well-defined, incremental changes to your software, but for now, think of commiting as "saving" your changes and pushing as "backing up" your software.  To "save", use a commit
 
-   git commit
+    git commit
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
 "Back up" to GitHub
 
-      git push
+    git push
 
 Type your GitHub user name and password to complete the push.
 
@@ -161,7 +161,7 @@ Type your GitHub user name and password to complete the push.
 
 Every time you make changes to your source code, run `make` to recompile it.
 
-      make
+    make
 
 Your compiler is required to take the name of its input file as a command-line argument and then write its output to standard out.  Standard out will be your terminal window by default.
 
@@ -183,8 +183,8 @@ The `> /tmp/all.ll` means the output will be written, i.e., redirected, to the `
 
 Since the output of your compiler is LLVM IR, you need to first convert it to machine code in order to run the output program.  
 
-      clang -o /tmp/all /tmp/all.ll  # convert to machine code
-      /tmp/all # run the program
+    clang -o /tmp/all /tmp/all.ll  # convert to machine code
+    /tmp/all # run the program
 
 All test cases given in the syllabus are paired with a corresponding file that contains the expected output of the SimpleC program.  You can view this with `cat`
 
@@ -223,12 +223,12 @@ For this course, we give you a well-defined tag name for each project submission
 
 Before proceeding, be sure you do not have any uncommitted changes to your source code.  Checking the `status` will tell you whether there are any untracked files or uncommitted file modifications.
 
-       git status
+    git status
 
 If there are changes, commit and push them first
 
-   git commit simplec.c
-   git push
+    git commit simplec.c
+    git push
 
 Type your GitHub user name and password to complete the push.
 
@@ -250,11 +250,11 @@ Type your GitHub user name and password to complete the push.
 
 View your project on GitHub by visiting its URL, replacing USERID with your GitHub ID.
 
-     https://github.com/cop3402fall19/project-USERID
+    https://github.com/cop3402fall19/project-USERID
 
 Above the directory listing, you should see a link to "Releases".  Click that link.  You can also go directly to the releases URL for your project (replacing USERID with your GitHub ID).
 
-      https://github.com/cop3402fall19/project-USERID/releases
+    https://github.com/cop3402fall19/project-USERID/releases
 
 This will show you the list of releases.  Ensure that your tag name is listed and that it is spelled correctly.  If there are no releases, then you have not completed the tagging process.  Double-check that you followed all the directions in the section above on submitting your project.
 
@@ -278,11 +278,10 @@ Use `-f` to force GitHub to accept to new tag.
 
 We will be cloning your project and building it with `make`.  You can sanity check your repo by cloning a fresh copy.
 
-   git clone https://github.com/cop3402fall19/project-USERID.git /tmp/test-project
-   cd /tmp/test-project
-   git checkout proj0  # use the appropriate tag for the project
-   make
-   # run tests
-   cd
-   rm -rf /tmp/test-project # this will destroy the temporary copy, so do not put anything important in here
-
+    git clone https://github.com/cop3402fall19/project-USERID.git /tmp/test-project
+    cd /tmp/test-project
+    git checkout proj0  # use the appropriate tag for the project
+    make
+    # run tests
+    cd
+    rm -rf /tmp/test-project # this will destroy the temporary copy, so do not put anything important in here
