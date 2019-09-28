@@ -48,8 +48,8 @@ This guide is for those using Ubuntu 18.04.  If you do not have this installed, 
 
 You will need the `git` command-line tool to manage your source code repository and `clang` and `make` to build your project and its output programs.
 
-   sudo apt-get update
-   sudo apt-get install clang llvm git make
+    sudo apt-get update
+    sudo apt-get install clang llvm git make
 
 ### Configuring `git`
 
