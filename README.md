@@ -14,9 +14,9 @@
 
 ## Office Hours
 
-- Mondays 2pm-3pm (Mesut, the cave) except 09/02
+- Mondays 2pm-3pm (Mesut, the cave HEC-308) except 09/02
 - Tuesdays 3pm-4pm (Paul, HEC-239) except 08/27
-- Wednesdays ~~1pm-2pm~~ 5:30pm-6:30pm (Mesut, the cave)
+- Wednesdays ~~1pm-2pm~~ 5:30pm-6:30pm (Mesut, the cave HEC-308)
 - Thursdays 3pm-4pm (Paul, HEC-239) except 08/27, 11/28
 - by appointment if necessary
 
