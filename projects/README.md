@@ -203,6 +203,7 @@ The complete set of instructions to compile and run a SimpleC program using your
 
 If the final `diff` showed no differences or no errors, that means your compiler worked correctly on that specific test case.
 
+
 ### Submitting your project
 
 Because you have been logging all changes to your source and syncing these changes to the GitHub copy of your repository, there is no need to package and send your software via webcourses or email.  The GitHub version of your repository is accessible to the course instructors and graders.
