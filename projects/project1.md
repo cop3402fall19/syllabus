@@ -103,6 +103,6 @@ A corresponding LLVM IR program looks like this:
     %t4 = sdiv    i32  50, %t3
     %t5 = add nsw i32 %t2, %t4
     %t6 = mul nsw i32   3, %t5
-    call void @print_integer(i32 %t2)
+    call void @print_integer(i32 %t6)
 
 Note again that order of operations is respected, e.g., the division happens before the addition, and that parentheses override this order., e.g., `(4 - 1)` happens before the multiplications.
