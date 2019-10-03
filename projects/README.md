@@ -213,7 +213,108 @@ If the final `diff` showed no differences or no errors, that means your compiler
 
 ### Testing your project
 
-Use the grading scripts from [this repository](https://github.com/cop3402fall19/grader-scripts/)
+
+### Installing the Grader Scripts
+
+#### Dependencies
+
+Be sure you have python version 3 installed.
+
+    sudo apt-get install python3 python3-distutils
+
+#### Get the scripts repository
+
+Go to your home directory 
+
+    cd
+
+Clone the repository
+
+    git clone https://github.com/cop3402fall19/grader-scripts.git
+
+#### Updating your copy of the grader-scripts repository
+
+Go to your local clone
+
+    cd ~/grader-scripts
+    
+Pull the latest changes
+
+    git pull
+
+
+### Run the Grader Script for all test cases
+
+Go to your project's local clone, replacing USERID with your GitHub ID.
+
+    cd ~/project-USERID
+    # OR (but not both) for vagrant
+    cd /vagrant/project-USERID
+
+Run the grader script, which takes the path to your repository (`./` in this case) and the path to the test programs.
+
+    python3 ~/grader-scripts/testcasesScript.py ./ ~/syllabus/projects/tests/proj0/
+
+Your output will look something like this
+
+    # the following are all the commands run by this test script.  you can cut-and-paste them to run them by hand.
+    # building your simplec compiler
+    make
+
+    # TESTING ../syllabus/projects/tests/proj0/all.simplec
+    /home/paul/research/teaching/cop3402fall19/grader-scripts/compile.sh ./simplec ../syllabus/projects/tests/proj0/all.simplec
+    # PASSED
+    /home/paul/research/teaching/cop3402fall19/grader-scripts/run.sh ../syllabus/projects/tests/proj0/all.ll
+    # PASSED
+
+    # TESTING ../syllabus/projects/tests/proj0/sub.simplec
+    /home/paul/research/teaching/cop3402fall19/grader-scripts/compile.sh ./simplec ../syllabus/projects/tests/proj0/sub.simplec
+    # PASSED
+    /home/paul/research/teaching/cop3402fall19/grader-scripts/run.sh ../syllabus/projects/tests/proj0/sub.ll
+    # ERROR run.sh failed on ../syllabus/projects/tests/proj0/sub.ll
+
+If any stage of the testing fails, you will get a `ERROR` message.
+Each line (that doesn't start with `#`) is the actual command run by
+the test script.  You can copy and paste this into your command-line
+to try running it yourself for debugging.
+
+### Using the provided `compile.sh` and `test.sh` scripts
+
+The individual parts of the grading scripts can also be performed
+using the included helper scripts.  Begin in your repo, replacing
+USERID with your GitHub ID.
+
+    cd ~/project-USERID
+    # OR (but not both) for vagrant
+    cd /vagrant/project-USERID
+
+This will use your `simplec` program to compile a SimpleC program to LLVM IR.
+
+    ~/grader-scripts/compile.sh project-USERID/simplec ~/syllabus/projects/tests/proj0/all.simplec 
+
+The output will be in `all.ll` in the same path as the `all.simplec`.
+
+    ~/grader-scripts/run.sh ~/syllabus/projects/tests/proj0/all.ll
+    
+The output will be in `all.out` in the same path as the `all.simplec`.  `run.sh` will automatically compare `all.out` to `all.groundtruth` if available.
+
+### Testing a particular version of your project
+
+Go to your project's local clone, replacing USERID with your GitHub ID.
+
+    cd ~/project-USERID
+    # OR (but not both) for vagrant
+    cd /vagrant/project-USERID
+
+Use `git checkout` to get a specific version, e.g., project 0.
+    
+    git checkout proj0
+
+Then run the grader scripts as above
+
+Don't forget to return to your latest source when done
+
+    git checkout master
 
 ### Submitting your project
 
