@@ -16,6 +16,7 @@ int32_t read_integer() {
   int n;
 
   errno = 0;
+  fprintf(stderr, "please enter an integer\n");
   n = scanf("%d", &i);
   if (n == 1) {
     return i;

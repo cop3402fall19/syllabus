@@ -27,6 +27,7 @@ Skills needed:
 
     statement
       = PRINT expression SEMI
+      | READ IDENTIFIER SEMI
       | IDENTIFIER ASSIGN expression SEMI
       | IF LPAREN expression RPAREN statement
       | IF LPAREN expression RPAREN statement ELSE statement

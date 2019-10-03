@@ -21,6 +21,7 @@ Objectives:
 
     statement
       = PRINT expression SEMI
+      | READ IDENTIFIER SEMI
       | IDENTIFIER ASSIGN expression SEMI
       | IDENTIFIER LBRACE NUMBER RBRACE ASSIGN expression SEMI
       | IF LPAREN expression RPAREN statement

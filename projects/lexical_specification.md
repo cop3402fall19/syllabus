@@ -17,6 +17,7 @@ expressions.
 Keywords are denoted by a quoted string and are a sequence of alphabetic characters.  These are the reserved words of the language, so no variables may be named them.
 
     PRINT      "print"
+    READ       "read"
     INT        "int"
     RETURN     "return"
 

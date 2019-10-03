@@ -16,10 +16,11 @@ define void @print_integer(i32) #0 {
 %struct._IO_codecvt = type opaque
 %struct._IO_wide_data = type opaque
 
-@.str.1 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
-@.str.2 = private unnamed_addr constant [6 x i8] c"scanf\00", align 1
 @stderr = external dso_local global %struct._IO_FILE*, align 8
-@.str.3 = private unnamed_addr constant [32 x i8] c"no matching characters. exiting\00", align 1
+@.str.1 = private unnamed_addr constant [25 x i8] c"please enter an integer\0A\00", align 1
+@.str.2 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.3 = private unnamed_addr constant [6 x i8] c"scanf\00", align 1
+@.str.4 = private unnamed_addr constant [24 x i8] c"no matching characters\0A\00", align 1
 
 declare i32* @__errno_location() #2
 declare i32 @__isoc99_scanf(i8*, ...) #1
@@ -32,40 +33,42 @@ define i32 @read_integer() #0 {
   %2 = alloca i32, align 4
   %3 = call i32* @__errno_location() #4
   store i32 0, i32* %3, align 4
-  %4 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i32 0, i32 0), i32* %1)
-  store i32 %4, i32* %2, align 4
-  %5 = load i32, i32* %2, align 4
-  %6 = icmp eq i32 %5, 1
-  br i1 %6, label %7, label %9
-
-; <label>:7:                                      ; preds = %0
-  %8 = load i32, i32* %1, align 4
-  ret i32 %8
+  %4 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %5 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %4, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.1, i32 0, i32 0))
+  %6 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.2, i32 0, i32 0), i32* %1)
+  store i32 %6, i32* %2, align 4
+  %7 = load i32, i32* %2, align 4
+  %8 = icmp eq i32 %7, 1
+  br i1 %8, label %9, label %11
 
 ; <label>:9:                                      ; preds = %0
-  %10 = call i32* @__errno_location() #4
-  %11 = load i32, i32* %10, align 4
-  %12 = icmp ne i32 %11, 0
-  br i1 %12, label %13, label %14
+  %10 = load i32, i32* %1, align 4
+  ret i32 %10
 
-; <label>:13:                                     ; preds = %9
-  call void @perror(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.2, i32 0, i32 0))
+; <label>:11:                                     ; preds = %0
+  %12 = call i32* @__errno_location() #4
+  %13 = load i32, i32* %12, align 4
+  %14 = icmp ne i32 %13, 0
+  br i1 %14, label %15, label %16
+
+; <label>:15:                                     ; preds = %11
+  call void @perror(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.3, i32 0, i32 0))
   call void @exit(i32 1) #5
   unreachable
 
-; <label>:14:                                     ; preds = %9
-  %15 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
-  %16 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %15, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.3, i32 0, i32 0))
+; <label>:16:                                     ; preds = %11
+  %17 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %18 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %17, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.4, i32 0, i32 0))
   call void @exit(i32 1) #5
   unreachable
 }
 
 define i32 @main() #0 {
-  %1 = call i32 @read_integer()
-  call void @print_integer(i32 %1)
-  %2 = call i32 @read_integer()
-  call void @print_integer(i32 %2)
-  %3 = call i32 @read_integer()
-  call void @print_integer(i32 %3)
+  %t1 = call i32 @read_integer()
+  call void @print_integer(i32 %t1)
+  %t2 = call i32 @read_integer()
+  call void @print_integer(i32 %t2)
+  %t3 = call i32 @read_integer()
+  call void @print_integer(i32 %t3)
   ret i32 0
 }
