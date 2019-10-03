@@ -410,8 +410,3 @@ We will be cloning your project and building it with `make`.  You can sanity che
     # run tests
     cd
     rm -rf /tmp/test-project # this will destroy the temporary copy, so do not put anything important in here
-
-### Update your version of the syllabus
-
-    cd ~/syllabus
-    git pull
