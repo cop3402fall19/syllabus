@@ -4,5 +4,6 @@ have the following extensions:
 
 - `.simplec` is a source program in SimpleC.  Compile these to `.ll` files with your compiler.
 - `.groundtruth` is the expected output of running the corresponding compiled `.simplec` file
+- `.in` is corresponding input file for a test, if needed for the test
 
 Please find scripts for automatically running tests here: <https://github.com/cop3402fall19/grader-scripts/>
