@@ -69,22 +69,25 @@ This section assumes you have completed Homework 1, in which you sign up for the
 
 First open a shell session.  For native installations of Ubuntu, navigate to the applications and select terminal or hit ctrl-alt-T.  For remote or virtual machine installations, `ssh` into the Ubuntu machine.
 
-Go to your home directory.  Running `cd`, i.e., "change directory", goes to your home directory by default.
+Go to your home directory.  Running `cd`, i.e., "change directory", goes to your home directory by default.  If you have vagrant setup, go to the mapped `/vagrant` directory (this is mapped to your host machine's syllabus/projects directory)
 
     cd
+    # OR (but not both)
+    cd /vagrant
 
 Clone your GitHub classrooms repository, where USERID is your GitHub user ID.  You will need to type your GitHub user name and password.
 
     git clone https://github.com/cop3402fall19/project-USERID.git
 
-If this step does not work, check the error message for a reason.  If yo have not completed Homework 1 yet, then your repository will not yet exist.  Complete Homework 1 first.
+If this step does not work, check the error message for a reason.  If you have not completed Homework 1 yet, then your repository will not yet exist.  Complete Homework 1 first.  If you have already cloned your repository, then there is no need to do this again.
 
 If you get an authentication error, double-check your user name and password, as well as the URL.  Be sure to replace `USERID` in the URL with your actual GitHub ID.
 
 ### Getting the course syllabus
 
-You should also clone the course syllabus, which will have the project's test cases.
+You should also clone the course syllabus, which will have the project's test cases.  If you already have it on your host machine, clone it again under vagrant.
 
+    cd # go to your home directory
     git clone https://github.com/cop3402fall19/syllabus.git
 
 ### File system structure
@@ -103,9 +106,14 @@ You can view these with `ls`, where `~/` is special syntax for referring to your
 
 Your project needs a Makefile for automatic grading.  This will allow your software to be built by running `make` at the root of your project.  The provided Makefile will compile and link all .c files in the root of your project repository and produce an executable called `simplec`.  The names of your .c files are irrelevant.
 
-Copy the provided Makefile into your source code repository.
+First go to your repo.
 
     cd ~/project-USERID
+    # OR (but not both)
+    cd /vagrant/project-USERID
+
+Copy the provided Makefile into your source code repository.
+
     cp ~/syllabus/projects/make/Makefile ./
 
 Commit the Makefile to your repository.  A commit saves changes to the source repository in a log.
@@ -288,3 +296,8 @@ We will be cloning your project and building it with `make`.  You can sanity che
     # run tests
     cd
     rm -rf /tmp/test-project # this will destroy the temporary copy, so do not put anything important in here
+
+### Update your version of the syllabus
+
+    cd ~/syllabus
+    git pull
