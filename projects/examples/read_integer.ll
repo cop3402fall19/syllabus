@@ -61,6 +61,11 @@ define i32 @read_integer() #0 {
 }
 
 define i32 @main() #0 {
-  ; EMIT CODE FROM YOUR COMPILER HERE
+  %1 = call i32 @read_integer()
+  call void @print_integer(i32 %1)
+  %2 = call i32 @read_integer()
+  call void @print_integer(i32 %2)
+  %3 = call i32 @read_integer()
+  call void @print_integer(i32 %3)
   ret i32 0
 }
