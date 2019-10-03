@@ -211,9 +211,6 @@ The complete set of instructions to compile and run a SimpleC program using your
 
 If the final `diff` showed no differences or no errors, that means your compiler worked correctly on that specific test case.
 
-### Testing your project
-
-
 ### Installing the Grader Scripts
 
 #### Dependencies
