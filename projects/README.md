@@ -44,12 +44,32 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 
 This guide is for those using Ubuntu 18.04.  If you do not have this installed, you can use a virtual machine in Linux or MacOS (use VirtualBox and download an Ubuntu 18 virtual machine or use the provided <Vagrantfile> with vagrant), or Windows Subsystem for Linux for Windows (download Ubuntu 18 from the app store).
 
-### Installing the required packages
+### Setting up vagrant
+
+Vagrant installation varies depending on your machine.  Download Vagrant here: <https://www.vagrantup.com/downloads.html>.
+
+_WARNING_: vagrant should not be installed on windows subsystem for linux.  You can download the Ubuntu 18 app from the windows store instead and follow the directions for non-vagrant users
+
+You will also need Virtual Box, which is the virtual machine software: <https://www.virtualbox.org>
+
+Copy this Vagrantfile to a directory and navigate that directory on the command-line.
+
+Run the following the setup your virtual machine (this may take while)
+
+    vagrant up
+
+Run the following the enter your virtual machine
+
+    vagrant ssh
+    
+### Installing the required packages for non-vagrant users
+
+(This step is not needed for vagrant users).
 
 You will need the `git` command-line tool to manage your source code repository and `clang` and `make` to build your project and its output programs.
 
     sudo apt-get update
-    sudo apt-get install clang llvm git make
+    sudo apt-get install clang llvm git make python3 python3-distutils
 
 ### Configuring `git`
 
@@ -71,9 +91,8 @@ First open a shell session.  For native installations of Ubuntu, navigate to the
 
 Go to your home directory.  Running `cd`, i.e., "change directory", goes to your home directory by default.  If you have vagrant setup, go to the mapped `/vagrant` directory (this is mapped to your host machine's syllabus/projects directory)
 
-    cd
-    # OR (but not both)
-    cd /vagrant
+    cd /vagrant # for vagrant users
+    cd ~/ # otherwise
 
 Clone your GitHub classrooms repository, where USERID is your GitHub user ID.  You will need to type your GitHub user name and password.
 
@@ -87,16 +106,46 @@ If you get an authentication error, double-check your user name and password, as
 
 You should also clone the course syllabus, which will have the project's test cases.  If you already have it on your host machine, clone it again under vagrant.
 
-    cd # go to your home directory
+Go to your home directory 
+
+    cd
+
+Clone the repository
+
     git clone https://github.com/cop3402fall19/syllabus.git
+
+### Getting the grading scripts
+
+Go to your home directory 
+
+    cd
+
+Clone the repository
+
+    git clone https://github.com/cop3402fall19/grader-scripts.git
+
+#### Updating your copies of the syllabus and grader-scripts
+
+Go to your local clone and pull
+
+    cd ~/syllabus
+    git pull
+    cd ~/grader-scripts
+    git pull
 
 ### File system structure
 
-At this point, you should have (at least) two directories under your home directory
+If you are using vagrant, you should have these directories:
 
-    /home/USER/
-        |- project-USERID
-        |- syllabus
+    /vagrant/project-USERID
+    /home/vagrant/syllabus
+    /home/vagrant/grader-scripts
+
+Otherwise you should have these:
+
+    /home/USER/project-USERID
+    /home/USER/syllabus
+    /home/USER/grader-scripts
 
 You can view these with `ls`, where `~/` is special syntax for referring to your home directory.
 
@@ -108,9 +157,8 @@ Your project needs a Makefile for automatic grading.  This will allow your softw
 
 First go to your repo.
 
-    cd ~/project-USERID
-    # OR (but not both)
-    cd /vagrant/project-USERID
+    cd /vagrant/project-USERID # for vagrant users
+    cd ~/project-USERID # otherwise
 
 Copy the provided Makefile into your source code repository.
 
@@ -211,42 +259,12 @@ The complete set of instructions to compile and run a SimpleC program using your
 
 If the final `diff` showed no differences or no errors, that means your compiler worked correctly on that specific test case.
 
-### Installing the Grader Scripts
-
-#### Dependencies
-
-Be sure you have python version 3 installed.
-
-    sudo apt-get install python3 python3-distutils
-
-#### Get the scripts repository
-
-Go to your home directory 
-
-    cd
-
-Clone the repository
-
-    git clone https://github.com/cop3402fall19/grader-scripts.git
-
-#### Updating your copy of the grader-scripts repository
-
-Go to your local clone
-
-    cd ~/grader-scripts
-    
-Pull the latest changes
-
-    git pull
-
-
 ### Run the Grader Script for all test cases
 
 Go to your project's local clone, replacing USERID with your GitHub ID.
 
-    cd ~/project-USERID
-    # OR (but not both) for vagrant
-    cd /vagrant/project-USERID
+    cd /vagrant/project-USERID # for vagrant users
+    cd ~/project-USERID # otherwise
 
 Run the grader script, which takes the path to your repository (`./` in this case) and the path to the test programs.
 
@@ -281,9 +299,8 @@ The individual parts of the grading scripts can also be performed
 using the included helper scripts.  Begin in your repo, replacing
 USERID with your GitHub ID.
 
-    cd ~/project-USERID
-    # OR (but not both) for vagrant
-    cd /vagrant/project-USERID
+    cd /vagrant/project-USERID # for vagrant users
+    cd ~/project-USERID # otherwise
 
 This will use your `simplec` program to compile a SimpleC program to LLVM IR.
 
@@ -299,9 +316,8 @@ The output will be in `all.out` in the same path as the `all.simplec`.  `run.sh`
 
 Go to your project's local clone, replacing USERID with your GitHub ID.
 
-    cd ~/project-USERID
-    # OR (but not both) for vagrant
-    cd /vagrant/project-USERID
+    cd /vagrant/project-USERID # for vagrant users
+    cd ~/project-USERID # otherwise
 
 Use `git checkout` to get a specific version, e.g., project 0.
     
