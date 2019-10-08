@@ -180,7 +180,7 @@ Create your C source code
 Then add it to the repository
 
     git add simplec.c
-    git commit
+    git commit simple.c
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
@@ -202,7 +202,7 @@ Type your GitHub user name and password to complete the push.
 
 As you program, periodically commit these changes to your local repository and sync them to GitHub.  Ideally, commits record a log of well-defined, incremental changes to your software, but for now, think of commiting as "saving" your changes and pushing as "backing up" your software.  To "save", use a commit
 
-    git commit
+    git commit simplec.c
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
@@ -384,6 +384,8 @@ Above the directory listing, you should see a link to "Releases".  Click that li
 This will show you the list of releases.  Ensure that your tag name is listed and that it is spelled correctly.  If there are no releases, then you have not completed the tagging process.  Double-check that you followed all the directions in the section above on submitting your project.
 
 You can view the tagged version of the repository by clicking on the random-looking string of seven characters beneath the tag name.  This will take you to a diff of the latest commit from that version of the source code.  Click "Browse Files" on the right to browse the tagged version of the source code.
+
+You can also view the source code from your repo's homepage by clicking the drop down just above the file listing, selecting tags, then selecting the tag you want to view.
 
 ### Resubmitting your project
 
