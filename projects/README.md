@@ -8,7 +8,7 @@ Your compiler must
 
 - be submitted using GitHub classrooms
 - be written in C and compileable with the `clang` C compiler
-- be built by running `make` from root of your repository by running
+- be built by running `make` from root of your repository
 - produce LLVM IR compliant with clang version 6
 - be executed by running
 
