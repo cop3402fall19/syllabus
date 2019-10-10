@@ -1,0 +1,5 @@
+int x;
+int y;
+read x;
+y = x + 1;
+print y;
