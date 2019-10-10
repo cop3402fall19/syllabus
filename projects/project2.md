@@ -91,6 +91,14 @@ Redirecting standard error is like redirecting standard output, except we use `2
 
 The compiler should maintain a table mapping variable names to memory locations, i.e., for LLVM IR temporary variables that hold the memory address of the variable's corresponding stack allocation.  There are many ways to implement a hash table.  One of the simplest, though it has poor lookup performance, is a linkedlist, where each node contains both the variable' name and the corresponding LLVM IR variable that holds the its memory location.
 
+Both type-checking and code generation are enabled by the symbol table:
+
+- When a new variable is declared, the compiler generates a stack allocation, then records a mapping from the variable name to the address of the stack allocation, i.e., the LLVM register name.
+- When a variable is assigned or read in, the compiler generates a `store` (after computing the right-hand side or calling the read_integer function), using the symbol table to remember where to store the value to
+- When a variable is used, the compiler generates a `load`, using the symbol table to remember where to load from
+- When a variable that hasn't been declared is used, the compiler knows this because there is no symbol table entry and generates a type error
+
+
 ## Reading from Input
 
 The <template.ll> now contains an implementation of `read_integer` which reads a single integer from standard input.  Your compiler should now emit this extra code before `main`:
@@ -194,7 +202,14 @@ The following program requires:
     x = 2;
     y = x + 1;
     print y;
-    
+
+Here is the what the symbol table will look like by the end of the program
+
+variable     |   address
+-------------|-------------
+`x`          |     `%t1`
+`y`          |     `%t2`
+
     
 Here is an equivalent LLVM IR program, annotated with the original source code in IR comments:
 
