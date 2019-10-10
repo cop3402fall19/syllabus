@@ -46,9 +46,41 @@ Skills needed:
 
 - Identifiers must be declared before usage and can only be defined once.
 
-- Assigning a value to an identifier changes its value from that point onward.  This will be implemented by allocating a memory location to each identifier.
+- Assigning a value to an identifier changes its value from that point onward.  This will be implemented by allocating a memory location to each identifier and using stores and loads to update and read variable values.
 
 - The value of an expression is computed before assigning it to an identifier.
+
+## Implementing Variables
+
+Variables are implemented by associating the identifier with a location in memory.  The compiler allocates space in memory for each declared variable.  For our implementation, we will use stack-allocated variables.  In LLVM IR, stack allocations are performed with the `alloca` instruction, e.g., if we declare `x` with `int x;`, we emit
+
+    ; "int x;"
+    %t1 = alloca i32
+    
+`alloca` takes the data-type, which for our compiler is always `i32`, and creates a new entry on the stack.  The resulting value, e.g., here in `%t1`, contains a pointer to memory location of this new stack entry.  The initial value can be arbitrary data, as in many implementations of C, so it is up to the programmer to initialize it.
+
+The compiler keeps track of what memory locations are associated with what variables using a symbol table.  A symbol table maps variable names to memory locations.  For our LLVM IR implementation, the memory location is stored in a temporary variable, e.g., `%t1`.  Variables are assigned with a `stored` to the memory location associated wtih the variable:
+
+    ; "x = 7;"
+    store i32 7, i32* %t1
+    
+Accessing a variable's value is done via a `load` to the memory location associated with the variable:
+
+    ; "print x;"
+    %t2 = load i32, i32* %t1 ; get value of x
+    call void @print_integer(i32 %t2) ; print the value
+
+## The symbol table and basic type-checking
+
+Consider the full program below:
+
+    int x;
+    x = 1 + y;
+    
+Line two refers to a variable `y` that has not yet been declared.  Our compiler should produce an error informing the programer of the use of an undefined variable `y`.
+
+The compiler should maintain a table mapping variable names to memory locations, i.e., for LLVM IR temporary variables that hold the memory address of the variable's corresponding stack allocation.
+
 
 ## Reading from Input
 
@@ -139,3 +171,79 @@ This reads three integers from standard input one-at-a-time and prints them out.
     clang -o read_integer read_integer.ll
     ./read_integer # this will hang, waiting for you to type an integer and hit enter
     ./read_integer < read_integer.in # this gets input from file instead of console
+
+## Larger Example
+
+The following program requires:
+
+- declaring variables
+- loading variable values
+- storing variable values
+
+    int x;
+    int y;
+    x = 2;
+    y = x + 1;
+    print y;
+    
+    
+Here is an equivalent LLVM IR program, annotated with the original source code in IR comments:
+
+    ; "int x;" allocate space for x
+    %t1 = alloca i32
+
+    ; "int y;" allocate space for y
+    %t2 = alloca i32
+
+    ; "x = 2;" assign x
+    store i32 2, i32* %t1
+
+    ; "y = x + 1;"
+    ; first evaluate the expression
+    %t3 = load i32, i32* %t1 ; get value of x
+    %t4 = add nsw i32 %t3, 1 ; do the addition
+    store i32 %t4, i32* %t2 ; assign result to y
+
+    ; "print y;"
+    ; first evaluate the expression
+    %t5 = load i32, i32* %t2 ; get value of y
+    call void @print_integer(i32 %t5) ; print the result
+
+## Example with Input
+
+The following program requires:
+
+- declaring variables
+- reading variables from input
+- loading variable values
+- storing variable values
+
+    int x;
+    int y;
+    read x;
+    y = x + 1;
+    print y;
+    
+    
+Here is an equivalent LLVM IR program, annotated with the original source code in IR comments:
+
+    ; "int x;" allocate space for x
+    %t1 = alloca i32
+
+    ; "int y;" allocate space for y
+    %t2 = alloca i32
+
+    ; "read x;" read x from input
+    %t3 = call i32 @read_integer()
+    store i32 %t3, i32* %t1
+
+    ; "y = x + 1;"
+    ; first evaluate the expression
+    %t4 = load i32, i32* %t1 ; get value of x
+    %t5 = add nsw i32 %t4, 1 ; do the addition
+    store i32 %t5, i32* %t2 ; assign result to y
+
+    ; "print y;"
+    ; first evaluate the expression
+    %t6 = load i32, i32* %t2 ; get value of y
+    call void @print_integer(i32 %t6) ; print the result
