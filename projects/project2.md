@@ -87,7 +87,7 @@ Printing to standard error can be acheived with
     
 Redirecting standard error is like redirecting standard output, except we use `2>` to explicitly ask for the file descriptor, "2", for the output file.
 
-## The symbol table and 
+## The symbol table
 
 The compiler should maintain a table mapping variable names to memory locations, i.e., for LLVM IR temporary variables that hold the memory address of the variable's corresponding stack allocation.  There are many ways to implement a hash table.  One of the simplest, though it has poor lookup performance, is a linkedlist, where each node contains both the variable' name and the corresponding LLVM IR variable that holds the its memory location.
 
