@@ -70,17 +70,26 @@ Accessing a variable's value is done via a `load` to the memory location associa
     %t2 = load i32, i32* %t1 ; get value of x
     call void @print_integer(i32 %t2) ; print the value
 
-## The symbol table and basic type-checking
+## Basic type-checking
 
 Consider the full program below:
 
     int x;
     x = 1 + y;
     
-Line two refers to a variable `y` that has not yet been declared.  Our compiler should produce an error informing the programer of the use of an undefined variable `y`.
+Line two refers to a variable `y` that has not yet been declared.  Our compiler should produce an error informing the programer of the use of an undefined variable `y`.  The compiler should print to standard error,
 
-The compiler should maintain a table mapping variable names to memory locations, i.e., for LLVM IR temporary variables that hold the memory address of the variable's corresponding stack allocation.
+    error: use of undeclared variable y
 
+Printing to standard error can be acheived with
+
+    fprintf(stderr, "error: ...");
+    
+Redirecting standard error is like redirecting standard output, except we use `2>` to explicitly ask for the file descriptor, "2", for the output file.
+
+## The symbol table and 
+
+The compiler should maintain a table mapping variable names to memory locations, i.e., for LLVM IR temporary variables that hold the memory address of the variable's corresponding stack allocation.  There are many ways to implement a hash table.  One of the simplest, though it has poor lookup performance, is a linkedlist, where each node contains both the variable' name and the corresponding LLVM IR variable that holds the its memory location.
 
 ## Reading from Input
 
