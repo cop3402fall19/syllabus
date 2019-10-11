@@ -242,11 +242,11 @@ The following program requires:
 - loading variable values
 - storing variable values
 
-    int x;
-    int y;
-    read x;
-    y = x + 1;
-    print y;
+        int x;
+        int y;
+        read x;
+        y = x + 1;
+        print y;
     
     
 Here is an equivalent LLVM IR program, annotated with the original source code in IR comments:
