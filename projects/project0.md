@@ -58,8 +58,8 @@ In order to translate the print statements, use the following templates:
 
 There are only five arithmetic operations you need to support, `add nsw`, `sub nsw`, `mul nsw`, `sdiv`, and `srem`.  (Technically `srem` is remainder, not modulo).  For example
 
-    print 2 + 3
-    print 2 - 3
+    print 2 + 3;
+    print 2 - 3;
     
 Can be translated to
 
