@@ -58,7 +58,8 @@ Skills needed:
         *  /
         +  -
         ==
-        && ||
+        &&
+        ||
         
     Parenthesized expressions have highest precedence.
     
