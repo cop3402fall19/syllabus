@@ -54,6 +54,7 @@ Skills needed:
 
 - Operators have precedence, highest to lowest.  Same line is equal precedence
 
+        !
         *  /
         +  -
         ==
@@ -70,6 +71,8 @@ Skills needed:
     logical expressions in parentheses before testing equality.
 
 - Use the underlying LLVM integer for logical operations.  A non-zero value means true while a zero value means false.
+
+- When the result of a Boolean operation is used
 
 - All variable declarations are in the same scope, i.e., any declarations inside of a compound statement must be unique for the entire program.
 
