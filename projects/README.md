@@ -45,6 +45,7 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 - Implement constant propagation and folding
 - Add a Boolean type
 - Perform dead code elimination
+- Add inequalities in conditional expressions
 
 ## Guide to the Command Line
 
