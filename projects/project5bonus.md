@@ -10,7 +10,7 @@ Objectives:
 ### Grammar
 
     program
-      = function*
+      = declaration* function* statement*
 
     function
       = INT IDENTIFIER LPAREN IDENTIFIER (COMMA IDENTIFIER)* RPAREN LCURLY declaration* statement* RCURLY
