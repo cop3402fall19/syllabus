@@ -42,6 +42,7 @@ Skills needed:
       | expression DIVIDE expression
       | expression MOD expression
       | expression EQUALS expression
+      | expression LT expression
       | expression AND expression
       | expression OR expression
       | NOT expression
