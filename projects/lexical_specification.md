@@ -35,6 +35,7 @@ Symbols, like keywords, are quoted strings, but in this case use puncutation sym
     RPAREN     ")"
     ASSIGN     "="
     EQUALS     "=="
+    LT         "<"
     AND        "&&"
     OR         "||"
     NOT        "!"
@@ -72,10 +73,12 @@ right-hand side of our patterns.
     DIGIT      [0-9]
     LETTER     [A-Za-z]
 
-Integers and identifiers are the only two tokens that 
+Integers and identifiers are the only two tokens that have attributes. 
 
     NUMBER      MINUS? DIGIT DIGIT*
     IDENTIFIER  LETTER (LETTER|DIGIT)*
+
+By convention, IDENTIFER matches the longest possible sequence, so `integer` is a single identifier, not the INT keyword followed by an identifier. 
 
 ### Whitespace
 
