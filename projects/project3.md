@@ -37,6 +37,7 @@ Skills needed:
       | expression DIVIDE expression
       | expression MOD expression
       | expression EQUALS expression
+      | expression LT expression
       | expression AND expression
       | expression OR expression
       | NOT expression
@@ -55,8 +56,9 @@ Skills needed:
 - Operators have precedence, highest to lowest.  Same line is equal precedence
 
         !
-        *  /
+        * / %
         +  -
+        <
         ==
         &&
         ||
