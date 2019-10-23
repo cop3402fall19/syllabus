@@ -35,6 +35,7 @@ Objectives:
       | expression TIMES NUMBER
       | expression DIVIDE NUMBER
       | expression EQUALS NUMBER
+      | expression LT expression
       | expression MOD NUMBER
       | expression AND NUMBER
       | expression OR NUMBER
