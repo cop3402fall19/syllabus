@@ -30,20 +30,19 @@ Objectives:
       | LCURLY statement* RCURLY
 
     expression
-      = expression PLUS NUMBER
-      | expression MINUS NUMBER
-      | expression TIMES NUMBER
-      | expression DIVIDE NUMBER
-      | expression EQUALS NUMBER
+      = expression PLUS expression
+      | expression MINUS expression
+      | expression TIMES expression
+      | expression DIVIDE expression
+      | expression MOD expression
+      | expression EQUALS expression
       | expression LT expression
-      | expression MOD NUMBER
-      | expression AND NUMBER
-      | expression OR NUMBER
+      | expression AND expression
+      | expression OR expression
       | NOT expression
       | LPAREN expression RPAREN
       | NUMBER
       | IDENTIFIER
-      | IDENTIFIER LBRACE NUMBER RBRACE
       | IDENTIFIER LPAREN ( expression (COMMA expression)* )? RPAREN
 
 
