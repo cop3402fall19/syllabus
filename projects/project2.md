@@ -48,7 +48,7 @@ Skills needed:
 
 - Assigning a value to an identifier changes its value from that point onward.  This will be implemented by allocating a memory location to each identifier and using stores and loads to update and read variable values.
 
-- The value of an expression is computed before assigning it to an identifier.
+- The value of an expression is computed before assigning it to an identifier.  This means that the variable being assigned can appear on the right-hand side of an assignment. 
 
 ## Implementing Variables
 
