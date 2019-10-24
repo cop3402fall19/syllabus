@@ -206,7 +206,53 @@ The final result in `%t8` can then be used in a subsequent branch instruction, f
 The following would be type errors.
 
 
+Assuming x and y are already defined
+
     x = 3 < y;
+    
+Without type-checking, the above expression might be naively translated to
 
 
     (10 - foo) || (bar == 4)
+
+As mentioned above, it is left as a bonus exercise to handle type errors.  Otherwise, such type-unsafe programs will not be given as test cases.
+
+## Implementing if statements
+
+    int x;
+    read x;
+    if (x == 10) {
+      print x;
+    } else {
+      print 0;
+    }
+    
+
+
+        ; "int x;" allocate space for x
+        %t1 = alloca i32  ; allocate space for x
+
+        ; "read x;" read x from input
+        %t2 = call i32 @read_integer()  ; read an integer from stdin
+        store i32 %t2, i32* %t1  ; store the result of read_integer
+        
+        ; compute x == 10
+        %t3 = load i32, i32* %t1  ; get value of x
+        %t4 = icmp eq i32 %t3, 10  ; do comparison
+        
+        
+        
+(x * 3 != 0) && (y < 10)
+        
+
+
+### Handling Boolean operations and comparisons
+
+In project 2, we parse and generate code for arithmetic expressions.  The expression parsing function returns a new temporary register (or constant depending on how you implemented it).  This integrates into the Boolean operations and comparison operations nicely.
+
+
+### Adding an else branch
+
+## Implementing while loops
+
+While loops are just like if statements, except they also have a unconditional branch that jumps back to where the conditional expression is evaluated.
