@@ -47,6 +47,7 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 - Perform dead code elimination
 - Add inequalities in conditional expressions
 - Implement for loops
+- Check that arithmetic and Boolean operations are not mixed
 
 ## Guide to the Command Line
 
