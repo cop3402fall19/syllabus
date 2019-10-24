@@ -6,3 +6,4 @@ template
 template_example.out
 read_integer
 var_test
+if
