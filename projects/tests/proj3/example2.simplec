@@ -1,0 +1,9 @@
+int x;
+int y;
+read y;
+x = 3;
+while (!(x == 0)) {
+  y = y * y;
+  x = x - 1;
+}
+print y;
