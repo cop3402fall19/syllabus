@@ -1,0 +1,10 @@
+int foo;
+int bar;
+read foo;
+read bar;
+if (foo != 0)
+  print 1;
+  if (bar == 0)
+    print 2;
+  else
+    print 3;

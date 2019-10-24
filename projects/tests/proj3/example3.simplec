@@ -1,0 +1,7 @@
+int foo;
+int bar;
+read foo;
+read bar;
+if ((foo * 3 != 0) && (bar < 10)) {
+  print 1;
+}
