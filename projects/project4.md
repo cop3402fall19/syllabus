@@ -55,7 +55,7 @@ Skills needed:
 ### What Has Changed?
 
 - A program can now have function definitions after declarations
-- A new function non-terminal defines syntax of function definitions.  Like the previous program, it contains a list of declarations followed by a list of statements.
+- A new function non-terminal defines syntax of function definitions.  Like the previous program, it contains a list of declarations followed by a list of statements.  The `?` means that the parenthesized part of the production is optional, i.e., it either doesn't appear or appears once.
 - There is a new expression production for function application.
 
 ### Notes on Semantics
