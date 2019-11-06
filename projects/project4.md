@@ -17,10 +17,10 @@ Skills needed:
 ### Grammar
 
     program
-      = declaration* function* statement*
+      = function function*
 
     function
-      = INT IDENTIFIER LPAREN ( IDENTIFIER (COMMA IDENTIFIER)* )? RPAREN LCURLY declaration* statement* RCURLY
+      = INT IDENTIFIER LPAREN ( INT IDENTIFIER (COMMA INT IDENTIFIER)* )? RPAREN LCURLY declaration* statement* RCURLY
 
     declaration
       = INT IDENTIFIER SEMI
@@ -55,12 +55,16 @@ Skills needed:
 ### What Has Changed?
 
 - A program can now have function definitions after declarations
-- A new function non-terminal defines syntax of function definitions.  Like the previous program, it contains a list of declarations followed by a list of statements.
+- A new function non-terminal defines syntax of function definitions.  Like the previous program, it contains a list of declarations followed by a list of statements.  The `?` means that the parenthesized part of the production is optional, i.e., it either doesn't appear or appears once.
 - There is a new expression production for function application.
 
 ### Notes on Semantics
 
-- There are no global variables, only global function names.  Function and variable names are in the same namespace so must be unique.
+- There are no global variables, only global function names.  It is left as a bonus exercise to implement global variables.
+
+- Functions should be defined before they are used.
+
+- There should one function named "main".
 
 - Functions have their own scope, that is the same identifier can be used in different function bodies and refer to different memory locations.
 

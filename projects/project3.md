@@ -223,9 +223,8 @@ As mentioned above, it is left as a bonus exercise to handle type errors.  Other
     read x;
     if (x == 10) {
       print x;
-    } else {
-      print 0;
     }
+    print 0;
     
 
 
@@ -238,7 +237,20 @@ As mentioned above, it is left as a bonus exercise to handle type errors.  Other
         
         ; compute x == 10
         %t3 = load i32, i32* %t1  ; get value of x
-        %t4 = icmp eq i32 %t3, 10  ; do comparison
+        %cond = icmp eq i32 %t3, 10  ; do comparison
+
+        ; if (x == 10)
+        br i1 %cond, label %label1, label %label2
+
+    label1:  ; body of the if statement
+        %t4 = load i32, i32* %t1 ; get value of x
+        call void @print_integer(i32 %t4) ; print the value of x
+        br label %label2
+        
+    label2:  ; after the if statement
+        call void @print_integer(i32 0) ; print 0
+        ret i32 0
+        
         
         
         

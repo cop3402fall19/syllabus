@@ -45,9 +45,10 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 - Implement constant propagation and folding
 - Add a Boolean type
 - Perform dead code elimination
-- Add inequalities in conditional expressions
 - Implement for loops
 - Check that arithmetic and Boolean operations are not mixed
+- Check that all paths of a function have a return statement
+- Check for unreachable code in a function (after a return statement)
 
 ## Guide to the Command Line
 
