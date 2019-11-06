@@ -17,10 +17,10 @@ Skills needed:
 ### Grammar
 
     program
-      = declaration* function* statement*
+      = function function*
 
     function
-      = INT IDENTIFIER LPAREN ( IDENTIFIER (COMMA IDENTIFIER)* )? RPAREN LCURLY declaration* statement* RCURLY
+      = INT IDENTIFIER LPAREN ( INT IDENTIFIER (COMMA INT IDENTIFIER)* )? RPAREN LCURLY declaration* statement* RCURLY
 
     declaration
       = INT IDENTIFIER SEMI
@@ -60,7 +60,11 @@ Skills needed:
 
 ### Notes on Semantics
 
-- There are no global variables, only global function names.  Function and variable names are in the same namespace so must be unique.
+- There are no global variables, only global function names.  It is left as a bonus exercise to implement global variables.
+
+- Functions should be defined before they are used.
+
+- There should one function named "main".
 
 - Functions have their own scope, that is the same identifier can be used in different function bodies and refer to different memory locations.
 
