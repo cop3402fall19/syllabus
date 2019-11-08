@@ -73,3 +73,9 @@ Skills needed:
 - A function always has a return value that is initialized to zero.  A function call is evaluated and its value replaces the call in the expression before continuing to evaluate the expression.
 
 - The parameters to a function call are fully evaluated before binding to its formal parameters.
+
+
+## New template
+
+Since this version of the compiler can support defining functions, there is no need for the template to explicitly emit a main method.  Instead use the new [template](template.h) macro `PROJ4_PROLOGUE`.
+
