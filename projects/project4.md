@@ -81,3 +81,6 @@ Skills needed:
 
 Since this version of the compiler can support defining functions, there is no need for the template to explicitly emit a main method.  Instead use the new [template](template.h) macro `PROJ4_PROLOGUE`.
 
+## Example of code generation for functions
+
+This [SimpleC program](examples/functions_example.simplec) is translated to this [LLVM program](examples/functions_example.ll). 
