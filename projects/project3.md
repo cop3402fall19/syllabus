@@ -227,6 +227,7 @@ As mentioned above, it is left as a bonus exercise to handle type errors.  Other
     print 0;
     
 
+This would look in LLVM like:
 
         ; "int x;" allocate space for x
         %t1 = alloca i32  ; allocate space for x
@@ -252,19 +253,27 @@ As mentioned above, it is left as a bonus exercise to handle type errors.  Other
         ret i32 0
         
         
+See the slides for pseudocode, including if-then-else statements.        
         
-        
-(x * 3 != 0) && (y < 10)
-        
-
 
 ### Handling Boolean operations and comparisons
 
 In project 2, we parse and generate code for arithmetic expressions.  The expression parsing function returns a new temporary register (or constant depending on how you implemented it).  This integrates into the Boolean operations and comparison operations nicely.
 
 
-### Adding an else branch
-
 ## Implementing while loops
 
 While loops are just like if statements, except they also have a unconditional branch that jumps back to where the conditional expression is evaluated.
+
+      br label %head // explicit branch to head
+    head:
+      ; condition expression
+      ; ...
+      %t3 = icmp slt i32 %t2, 5
+      br i1 %t3, label %body, label %exit
+    body:
+      ; body of while loop
+      ; ...
+      br label %head
+    exit:
+      ; code after the while loop

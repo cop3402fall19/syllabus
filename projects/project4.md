@@ -64,7 +64,9 @@ Skills needed:
 
 - Functions should be defined before they are used.
 
-- There should one function named "main".
+- There should one function named "main" of type () -> int.
+
+- Functions must end with a return statement.
 
 - Functions have their own scope, that is the same identifier can be used in different function bodies and refer to different memory locations.
 
