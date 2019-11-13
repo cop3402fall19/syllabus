@@ -1,0 +1,7 @@
+int f(int x) {
+  return x;
+}
+
+int f() {
+  return 1;
+}
