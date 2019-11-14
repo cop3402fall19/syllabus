@@ -1,5 +1,6 @@
 Slides:
 
+- <https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/lectures/15/Slides15.pdf>
 - <https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/lectures/16/Slides16.pdf>
 - <https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/lectures/17/Slides17.pdf>
 
