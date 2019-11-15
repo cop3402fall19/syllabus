@@ -43,11 +43,12 @@ Skills needed:
       | expression MOD expression
       | expression EQUALS expression
       | expression LT expression
+      | expression GT expression
       | expression AND expression
       | expression OR expression
       | NOT expression
       | LPAREN expression RPAREN
-      | NUMBER
+      | INTEGER
       | IDENTIFIER
       | IDENTIFIER LPAREN ( expression (COMMA expression)* )? RPAREN
 
