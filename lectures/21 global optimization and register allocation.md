@@ -7,5 +7,6 @@ Slides:
 Resources on register allocation:
 
 - <http://blog.llvm.org/2011/09/greedy-register-allocation-in-llvm-30.html>
+- <https://llvm.org/docs/CodeGenerator.html#built-in-register-allocators>
 - <http://compilers.cs.ucla.edu/fernando/publications/drafts/survey.pdf>
 - <http://web.cs.ucla.edu/~palsberg/course/cs132/linearscan.pdf>
