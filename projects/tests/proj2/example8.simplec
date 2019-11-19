@@ -1,0 +1,10 @@
+int a;
+int b;
+int c;
+int d;
+a = 2;
+b = 3;
+read c;
+print c;
+d = (c + b + a) * c - a - b;
+print d;

@@ -1,0 +1,8 @@
+int y;
+int z;
+read z;
+y = 3;
+while (!(y == z)) {
+	y = y + z;
+}
+print y;

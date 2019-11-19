@@ -1,0 +1,12 @@
+int x;
+int y;
+int z;
+int a;
+read x;
+print x;
+y = 5;
+z = -5;
+print y;
+a = (x / y) * z * z;
+print a;
+print z;

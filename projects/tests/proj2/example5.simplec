@@ -1,0 +1,7 @@
+int x;
+int y;
+int z;
+x = 10;
+y = 1;
+z = (x + (y - y + x)) / x;
+print z;

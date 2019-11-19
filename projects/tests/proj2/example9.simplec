@@ -1,0 +1,7 @@
+int x;
+int y;
+int z; 
+x = (42);
+y = 351;
+z = y % x;
+print z;

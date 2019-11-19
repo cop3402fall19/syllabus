@@ -1,0 +1,18 @@
+int base;
+int exp;
+
+int power(int base, int exp) {
+  int result;
+  if (exp < 0) return 0;
+  if (exp == 0) return 1;
+  result = 1;
+  while (exp > 0) {
+    result = result * base;
+    exp = exp - 1;
+  }
+  return result;
+}
+
+read base;
+read exp;
+print power(base, exp);
