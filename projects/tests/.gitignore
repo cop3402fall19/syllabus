@@ -1,6 +1,11 @@
 *.out
 *.err
 *.ll
+example8
+example9
+secret10
+secret6
+secret7
 secret8
 secret9
 proj4
