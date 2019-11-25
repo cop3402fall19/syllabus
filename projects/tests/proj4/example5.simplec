@@ -1,0 +1,18 @@
+int digits(int z) {
+	int zz;
+	zz = z;
+	print zz;
+	if (zz < 0) {
+		return 0;
+	} else if ((zz > 0) && (zz < 10)) {
+		return 1;
+	} else {
+		return digits(((zz / 10) + 1));
+	}
+}
+
+int main() {
+	int z;
+	z = 65536;
+	print digits(z);
+}
