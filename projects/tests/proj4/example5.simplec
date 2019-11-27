@@ -18,4 +18,5 @@ int main() {
 	int z;
 	z = 65536;
 	print digits(z);
+	return 0;
 }
