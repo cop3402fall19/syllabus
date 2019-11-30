@@ -3,6 +3,7 @@ int digits(int z) {
 	zz = z;
 	print zz;
 	int result;
+	result = 0;
 	if (zz < 0) {
 		result = 0;
 	} else if ((zz > 0) && (zz < 10)) {
