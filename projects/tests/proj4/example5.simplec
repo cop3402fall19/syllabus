@@ -1,8 +1,8 @@
 int digits(int z) {
 	int zz;
+	int result;
 	zz = z;
 	print zz;
-	int result;
 	result = 0;
 	if (zz < 0) {
 		result = 0;
