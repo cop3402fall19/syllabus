@@ -1,3 +1,4 @@
 int main() {
-  gfunc();
+  print gfunc();
+  return 0;
 }

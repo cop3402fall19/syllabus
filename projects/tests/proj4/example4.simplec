@@ -1,0 +1,26 @@
+int fib(int x) {
+	int f0;
+	int f1;
+	
+	if (x == 0) {
+		return 0;
+	} else if (( x == 1) || (x == 2)) {
+		return 1;
+	} else {
+		f1 = fib(x - 1);
+		f0 = fib(x - 2);
+		return f1 + f0;
+	}
+}
+
+int main() {
+	int x;
+	int result;
+	read x;
+	if (x != 0) {
+		result = fib(x);
+		print result;
+	} else {
+		print x;
+	}
+}
