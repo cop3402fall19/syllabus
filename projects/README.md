@@ -52,7 +52,7 @@ The [grammar overview](grammar_overview.md) and [lexical specification](lexical_
 
 ## Guide to the Command Line
 
-This guide is for those using Ubuntu 18.04.  If you do not have this installed, you can use a virtual machine in Linux or MacOS (use VirtualBox and download an Ubuntu 18 virtual machine or use the provided [Vagrantfile](Vagrantfile) with vagrant), or Windows Subsystem for Linux for Windows (download Ubuntu 18 from the app store).
+This guide is for those using Ubuntu 18.04.  If you do not have this installed, you can use a virtual machine in Linux or MacOS (use VirtualBox and download an Ubuntu 18 virtual machine or use the provided [Vagrantfile](./Vagrantfile) with vagrant), or Windows Subsystem for Linux for Windows (download Ubuntu 18 from the app store).
 
 ### Setting up vagrant
 
