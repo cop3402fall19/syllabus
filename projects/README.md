@@ -190,7 +190,7 @@ Create your C source code
 Then add it to the repository
 
     git add simplec.c
-    git commit simple.c
+    git commit simplec.c
 
 `git commit` will open an editor.  Enter a message at the top describing the change.  Exit using `ctrl-x`, then hit `y` to confirm saving, and finally hit the `enter` key to confirm the file name.
 
