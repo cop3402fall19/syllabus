@@ -44,7 +44,7 @@ Skills needed:
       | expression OR expression
       | NOT expression
       | LPAREN expression RPAREN
-      | INTEGER
+      | NUMBER
       | IDENTIFIER
 
 
