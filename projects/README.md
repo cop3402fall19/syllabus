@@ -276,9 +276,9 @@ Go to your project's local clone, replacing USERID with your GitHub ID.
     cd /vagrant/project-USERID # for vagrant users
     cd ~/project-USERID # otherwise
 
-Be sure to first clear out any stale output from prior runs:
+Be sure to first clear out any stale output from prior runs (change proj to the project you want to clear)
 
-    proj=proj3; rm ~/syllabus/projects/tests/$proj/*.{out,err,ll} $(ls ~/syllabus/projects/tests/$proj/ | grep -v "\.");
+    proj=proj3; rm -f ~/syllabus/projects/tests/$proj/*.{out,err,ll} $(ls ~/syllabus/projects/tests/$proj/ | grep -v "\.");
 
 Run the grader script, which takes the path to your repository (`./` in this case) and the path to the test programs.
 
